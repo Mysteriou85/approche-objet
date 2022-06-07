@@ -10,7 +10,7 @@ public class TestBanque {
         comptes[0] = compte1;
         comptes[1] = compteTaux1;
 
-        // System.out.println(compte1);
+        System.out.println(compte1);
         System.out.println(compteTaux1);
     }
 

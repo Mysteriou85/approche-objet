@@ -11,8 +11,7 @@ public class CompteTaux extends Compte {
 
     public String toString() {
         return super.toString() + "\n\tCompteTaux{" +
-                "remuneration = " + remuneration +
-                '}';
+            "remuneration = " + remuneration + '}';
     }
 
 
