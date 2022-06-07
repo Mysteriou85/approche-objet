@@ -5,20 +5,20 @@ public class Compte {
     @Override
     public String toString() {
         return "Compte{" +
-                "numeroCompte=" + numeroCompte +
-                ", soldeCompte=" + soldeCompte +
+                "numeroCompte = " + numeroCompte +
+                ", soldeCompte = " + soldeCompte +
                 '}';
     }
 
-    int numeroCompte;
+    String numeroCompte;
     int soldeCompte;
 
-    public Compte(int numeroCompte, int soldeCompte) {
+    public Compte(String numeroCompte, int soldeCompte) {
         this.numeroCompte = numeroCompte;
         this.soldeCompte = soldeCompte;
     }
 
-    public int getNumeroCompte() {
+    public String getNumeroCompte() {
         return numeroCompte;
     }
 
@@ -26,7 +26,7 @@ public class Compte {
         return soldeCompte;
     }
 
-    public void setNumeroCompte(int numeroCompte) {
+    public void setNumeroCompte(String numeroCompte) {
         this.numeroCompte = numeroCompte;
     }
 
