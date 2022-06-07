@@ -19,7 +19,7 @@ public class TestOperation {
             System.out.println(operation.getType() + " (" + operation.getDateOperation() + ") : " +  operation.getMontantOperation());
             if (operation.getType() == "CREDIT") {
                 totalOperation += operation.getMontantOperation();
-            } else {
+            } else if (operation.getType() == "DEBIT") {
                 totalOperation -= operation.getMontantOperation();
             }
         }
