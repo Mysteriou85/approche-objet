@@ -14,6 +14,7 @@ public class CompteTaux extends Compte {
             "remuneration = " + remuneration + '}';
     }
 
-
-
+    public double getRemuneration() {
+        return remuneration;
+    }
 }
