@@ -10,7 +10,9 @@ public class Rectangle implements ObjetGeometrique {
         this.largeur = largeur;
     }
 
+    @Override
     public double perimetre() { return (longueur + largeur) * 2; }
+    @Override
     public double surface() { return longueur * largeur; }
 
 

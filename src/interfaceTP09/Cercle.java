@@ -8,8 +8,14 @@ public class Cercle implements ObjetGeometrique {
         this.rayon = rayon;
     }
 
-    public double perimetre() { return 2 * rayon * Math.PI; }
-    public double surface() { return (2 * rayon) * Math.PI; }
+    @Override
+    public double perimetre() {
+        return 2 * rayon * Math.PI;
+    }
+    @Override
+    public double surface() {
+        return (2 * rayon) * Math.PI;
+    }
 
 
 }
