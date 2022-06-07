@@ -6,6 +6,7 @@ public class Credit extends Operation {
         super(dateOperation, montantOperation);
     }
 
+    @Override
     public String getType() {
         return "CREDIT";
     }
