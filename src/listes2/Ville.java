@@ -29,4 +29,11 @@ public class Ville implements Comparable<Ville> {
 
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public long getNbHabitants() {
+        return nbHabitants;
+    }
 }
