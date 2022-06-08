@@ -6,34 +6,49 @@ import gestionSalaire.coordonnee.CoordoContactProfessionnel;
 
 public class Employe implements Personne {
 
+    String nom;
+    String prenom;
+    String numeroSecurite;
+    Adresse adresse;
+    CoordoContactPersonnel coordoperso;
+    CoordoContactProfessionnel coordopro;
+
     @Override
     public String nom() {
-        return "joe";
+        return nom;
     }
 
     @Override
     public String prenom() {
-        return "joe";
+        return prenom;
     }
 
     @Override
     public String numeroSecurite() {
-        return "0101010101";
+        return numeroSecurite;
     }
 
     @Override
     public Adresse adresse(int numeroRue, String nomRue, String codePostal, String ville) {
-        return adresse(numeroRue, nomRue, codePostal, ville);
+        return adresse;
     }
 
     @Override
     public CoordoContactPersonnel coordoContactPersonnel(String numeroTelephonePerso, String mailPerso) {
-        return coordoContactPersonnel(numeroTelephonePerso, mailPerso);
+        return coordoperso;
     }
 
     @Override
     public CoordoContactProfessionnel coordoCOntactProfessionnel(String numeroTelephonePro, String mailPro, String service, String adresseEntreprise) {
-        return coordoCOntactProfessionnel(numeroTelephonePro, mailPro, service, adresseEntreprise);
+        return coordopro;
     }
 
+    public Employe(String nom, String prenom, String numeroSecurite, Adresse adresse, CoordoContactPersonnel coordoperso, CoordoContactProfessionnel coordopro) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.numeroSecurite = numeroSecurite;
+        this.adresse = adresse;
+        this.coordoperso = coordoperso;
+        this.coordopro = coordopro;
+    }
 }
