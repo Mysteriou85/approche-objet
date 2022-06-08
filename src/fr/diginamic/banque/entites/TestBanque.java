@@ -12,7 +12,7 @@ public class TestBanque {
     public static void main(String[] args) {
 
         Compte compte1 = new Compte("0001", 15);
-        CompteTaux compteTaux1 = new CompteTaux("0002", 101, 2.1);
+        CompteTaux compteTaux1 = new CompteTaux("0002", 101, 2.2d);
 
         compteDaoMem.sauvegarder(compte1);
         compteDaoMem.sauvegarder(compteTaux1);
@@ -40,7 +40,12 @@ public class TestBanque {
                     System.out.println("--- Liste des comptes ---");
                     // compteDaoMem.lister();
                     for(Compte compte : compteDaoMem.lister()) {
-                        System.out.println("Numero:" + compte.getNumeroCompte() + " | Solde:" + compte.getSoldeCompte());
+                        if (compte instanceof CompteTaux) {
+                            System.out.println("Numero:" + compte.getNumeroCompte() + " | Solde:" + compte.getSoldeCompte() + " | Taux:" + ((CompteTaux)compte).getRemuneration());
+                        } else if (compte instanceof Compte) {
+                            System.out.println("Numero:" + compte.getNumeroCompte() + " | Solde:" + compte.getSoldeCompte());
+                        }
+
                     }
                     break;
                 case 2:
