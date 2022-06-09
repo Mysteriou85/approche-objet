@@ -18,7 +18,11 @@ public class TestTri {
         }));
 
         System.out.println(listeVilles);
-        Collections.sort(listeVilles);
+        Collections.sort(listeVilles, new ComparatorHabitant());
+        System.out.println("--- Tri par habitant ---");
+        System.out.println(listeVilles);
+        Collections.sort(listeVilles, new ComparatorNom());
+        System.out.println("--- Tri par nom ---");
         System.out.println(listeVilles);
 
     }

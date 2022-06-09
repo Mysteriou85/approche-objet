@@ -2,7 +2,8 @@ package listes2;
 
 import java.util.ArrayList;
 
-public class Ville implements Comparable<Ville> {
+public class Ville {
+//    public class Ville implements Comparable<listes2.Ville> {
 
     public String nom;
     public long nbHabitants;
@@ -12,16 +13,16 @@ public class Ville implements Comparable<Ville> {
         this.nbHabitants = nbHabitants;
     }
 
-    @Override
-    public int compareTo(Ville o) {
-        if (this.nom.charAt(0) > o.getNom().charAt(0)) {
-            return 1;
-        }
-        if (this.nom.charAt(0) < o.getNom().charAt(0)) {
-            return -1;
-        }
-        return 0;
-    }
+//    @Override
+//    public int compareTo(Ville o) {
+//        if (this.nom.charAt(0) > o.getNom().charAt(0)) {
+//            return 1;
+//        }
+//        if (this.nom.charAt(0) < o.getNom().charAt(0)) {
+//            return -1;
+//        }
+//        return 0;
+//    }
 
     @Override
     public String toString() {
