@@ -12,21 +12,20 @@ public class Ville implements Comparable<Ville> {
         this.nbHabitants = nbHabitants;
     }
 
-
     @Override
-    public int compareTo(Ville ville) {
-        if (ville.nbHabitants == this.nbHabitants) return 0;
-        if (ville.nbHabitants > this.nbHabitants) return -1;
-        return 1;
+    public int compareTo(Ville o) {
+        if (this.nom.charAt(0) > o.getNom().charAt(0)) {
+            return 1;
+        }
+        if (this.nom.charAt(0) < o.getNom().charAt(0)) {
+            return -1;
+        }
+        return 0;
     }
 
     @Override
     public String toString() {
         return "Ville{" + "nom='" + nom + '\'' + ", nbHabitants=" + nbHabitants + '}';
-    }
-
-    public static void main(String[] args) {
-
     }
 
     public String getNom() {
@@ -36,4 +35,5 @@ public class Ville implements Comparable<Ville> {
     public long getNbHabitants() {
         return nbHabitants;
     }
+
 }
