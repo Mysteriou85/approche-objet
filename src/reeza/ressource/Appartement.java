@@ -8,12 +8,12 @@ public class Appartement {
     String etage;
     boolean reserve;
 
-    public Appartement(int prixLocation, String adresseAppartement, int personneMax, String etage, boolean reserve) {
+    public Appartement(int prixLocation, String adresseAppartement, int personneMax, String etage) {
         this.prixLocation = prixLocation;
         this.adresseAppartement = adresseAppartement;
         this.personneMax = personneMax;
         this.etage = etage;
-        this.reserve = reserve;
+        this.reserve = false;
     }
 
     public int getPrixLocation() {
